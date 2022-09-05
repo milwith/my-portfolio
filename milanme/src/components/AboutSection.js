@@ -1,33 +1,58 @@
 import React from 'react';
 import home1 from '../img/home1.jpeg';
+import styled from 'styled-components';
 
 
 const AboutSection = () => {
     return (
-        <div>
-            <div className="discription">
+        <About>
+            <Description>
                 <div className="title">
-                  <div className="hide">
+                  <Hide>
                     <h2>i am</h2>
-                  </div>
-                  <div className="hide">
+                  </Hide>
+                  <Hide>
                     <h2>a <span>programmer</span> with</h2>
-                  </div>
-                  <div className="hide">
+                  </Hide>
+                  <Hide>
                     <h2>BEST courage.</h2>
-                  </div>
+                  </Hide>
                 </div>
                 <p>
                 A programmer is an individual that writes/creates computer software or applications by giving the computer specific programming instructions
                 </p>
                 <button>Contact Me</button>
-            </div>
-            <div className="image">
+            </Description>
+            <Image>
                 <img src={home1} alt="milan withanage" />
-            </div>
-        </div>
+            </Image>
+        </About>
 
     )
 }
 
+const About = styled.div`
+   min-height: 90vh;
+   display: flex;
+   padding: 5rem 10rem;
+   color: white;
+`;
+const Description =styled.div`
+    flex: 1;
+    padding-right: 5rem;
+ h2{
+  font-weight: lighter;
+ }   
+`;
+const Image = styled.div`
+    flex: 1;
+    overflow: hidden;
+    img{
+      width:350px;
+      object-fit: cover;
+    }
+`;
+const Hide = styled.div`
+   overflow: hidden;
+`
 export default AboutSection;
